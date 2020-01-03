@@ -1,9 +1,3 @@
-// Place all the styles related to the admins_backoffice controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-/*
-*= require @fortawesome/fontawesome-free/css/fontawesome.min
-*= require font-awesome/css/font-awesome.min
-*= require sb-admin-2.min
-*/
+@import "@fortawesome/fontawesome-free/css/fontawesome.min";
+@import "font-awesome/css/font-awesome.min";
+@import "sb-admin-2.min"
