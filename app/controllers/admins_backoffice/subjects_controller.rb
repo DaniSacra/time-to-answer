@@ -1,8 +1,8 @@
 class AdminsBackoffice::SubjectsController < AdminsBackofficeController
-  before_action :set_admin, only: [:edit, :update, :destroy]
+  before_action :set_subject, only: [:edit, :update, :destroy]
 
   def index
-    @subjects = Subject.all.order(:id).page(params[:page]).per(3)
+    @subjects = Subject.all.order(:id).page(params[:page]).per(10)
   end
 
   def new
@@ -23,7 +23,6 @@ class AdminsBackoffice::SubjectsController < AdminsBackofficeController
 
   def update    
     if @subject.update(subject_params)
-#      AdminMailer.update_email(current_admin, @subject).deliver_now
       redirect_to admins_backoffice_subjects_path, notice: "Assunto/Área atualizado com sucesso!"
     else
       render :edit
